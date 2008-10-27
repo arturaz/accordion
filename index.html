@@ -26,7 +26,7 @@ h3.accordion_toggle_active, h4.accordion_toggle_active {
   padding: 0.5em;
 }
 .clear { clear: both; }
-#nested {
+#horizontal, #nested, #noanim {
   margin: 1em 4em;
 }
   </style>
@@ -87,11 +87,11 @@ h3.accordion_toggle_active, h4.accordion_toggle_active {
   </div>
   <h3>Nested</h3>
   <div class="accordion_content" id="nested">
-    <h4>1</h4>
+    <h4>ATTENTION!</h4>
     <div class="nested_accordion_content">
-      <p>I have text.</p>
-      <p>And some more of I have text.</p>
-      <p>Yeah!.</p>
+      <p>Take notice that nested accordions cannot have same toggle/content
+      selectors as their parents or else horrible things will happen ;-)</p>
+      <p>You're welcome to make a patch to fix this.</p>
     </div>
     <h4>2</h4>
     <div class="nested_accordion_content">
@@ -114,11 +114,9 @@ h3.accordion_toggle_active, h4.accordion_toggle_active {
   </div>
   <h3>No animation</h3>
   <div class="accordion_content" id="noanim">
-    <h4>1</h4>
+    <h4>Info</h4>
     <div class="nested_accordion_content">
-      <p>I have text.</p>
-      <p>And some more of I have text.</p>
-      <p>Yeah!.</p>
+      <p>Animation can be disabled by passing `animate: false` option.</p>
     </div>
     <h4>2</h4>
     <div class="nested_accordion_content">
