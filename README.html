@@ -1,0 +1,128 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Accordion (arturaz) DEMO</title>
+  <script src="js/prototype.js" type="text/javascript"></script>
+  <script src="js/effects.js" type="text/javascript"></script>
+  <script src="js/arturaz-accordion.js" type="text/javascript"></script>
+  <style>
+#accordion {
+  border: 1px black solid;
+  width: 40em;
+}
+h3, h4 {
+  text-align: center;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+h3.accordion_toggle_active, h4.accordion_toggle_active {
+  letter-spacing: 0.4em;
+}
+#horizontal h4, .horizontal_accordion_content {
+  float: left;
+  padding: 0.5em;
+}
+.clear { clear: both; }
+#nested {
+  margin: 1em 4em;
+}
+  </style>
+</head>
+<body>
+<h1>Accordion script that WORKS and is DEAD SIMPLE</h1>
+<h2>Why?</h2>
+<p>Because everything else was either:</p>
+<ul>
+  <li>Too complex.</li>
+  <li>Didn't have horizontal accordions.</li>
+  <li>Didn't work (used old prototype).</li>
+</ul>
+<h2>Demo</h2>
+<div id="accordion">
+  <h3>One</h3>
+  <div class="accordion_content">
+    <p>I have text.</p>
+    <p>And some more of I have text.</p>
+    <p>Yeah!.</p>
+  </div>
+  <h3>Two</h3>
+  <div class="accordion_content">I have text.</div>
+  <h3>Three</h3>
+  <div class="accordion_content">
+    <p>I have text.</p>
+    <p>And some more of I have text.</p>
+    <p>Yeah!.</p>
+  </div>
+  <h3>Horizontal</h3>
+  <div class="accordion_content" id="horizontal">
+    <h4>1</h4>
+    <div class="horizontal_accordion_content">
+      <p>I have text.</p>
+      <p>And some more of I have text.</p>
+      <p>Yeah!.</p>
+    </div>
+    <h4>2</h4>
+    <div class="horizontal_accordion_content">
+      <p>I have text.</p>
+      <p>And some more of I have text.</p>
+      <p>Yeah!.</p>
+    </div>
+    <h4>3</h4>
+    <div class="horizontal_accordion_content">
+      <p>I have text.</p>
+      <p>And some more of I have text.</p>
+      <p>Yeah!.</p>
+    </div>
+    <h4>4</h4>
+    <div class="horizontal_accordion_content">
+      <p>I have text.</p>
+      <p>And some more of I have text.</p>
+      <p>Yeah!.</p>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <h3>Nested</h3>
+  <div class="accordion_content" id="nested">
+    <h4>1</h4>
+    <div class="accordion_content">
+      <p>I have text.</p>
+      <p>And some more of I have text.</p>
+      <p>Yeah!.</p>
+    </div>
+    <h4>2</h4>
+    <div class="accordion_content">
+      <p>I have text.</p>
+      <p>And some more of I have text.</p>
+      <p>Yeah!.</p>
+    </div>
+    <h4>3</h4>
+    <div class="accordion_content">
+      <p>I have text.</p>
+      <p>And some more of I have text.</p>
+      <p>Yeah!.</p>
+    </div>
+    <h4>4</h4>
+    <div class="accordion_content">
+      <p>I have text.</p>
+      <p>And some more of I have text.</p>
+      <p>Yeah!.</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+new Arturaz.Accordion('accordion', {toggleSelector: 'h3'})
+new Arturaz.Accordion('horizontal', {
+  type: 'horizontal', toggleSelector: 'h4'})
+new Arturaz.Accordion('nested', {toggleSelector: 'h4'})
+//]]>
+</script>
+<h2>Docs? Patches?</h2>
+<p>For docs see .js file. For patches - see .js file/use github.</p>
+<p>Enjoy. It's released as Creative Commons so do whatever you want with it
+but please leave some credit for me too ;-).</p>
+</body>
+</html>
