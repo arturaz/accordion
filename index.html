@@ -88,25 +88,52 @@ h3.accordion_toggle_active, h4.accordion_toggle_active {
   <h3>Nested</h3>
   <div class="accordion_content" id="nested">
     <h4>1</h4>
-    <div class="accordion_content">
+    <div class="nested_accordion_content">
       <p>I have text.</p>
       <p>And some more of I have text.</p>
       <p>Yeah!.</p>
     </div>
     <h4>2</h4>
-    <div class="accordion_content">
+    <div class="nested_accordion_content">
       <p>I have text.</p>
       <p>And some more of I have text.</p>
       <p>Yeah!.</p>
     </div>
     <h4>3</h4>
-    <div class="accordion_content">
+    <div class="nested_accordion_content">
       <p>I have text.</p>
       <p>And some more of I have text.</p>
       <p>Yeah!.</p>
     </div>
     <h4>4</h4>
-    <div class="accordion_content">
+    <div class="nested_accordion_content">
+      <p>I have text.</p>
+      <p>And some more of I have text.</p>
+      <p>Yeah!.</p>
+    </div>
+  </div>
+  <h3>No animation</h3>
+  <div class="accordion_content" id="noanim">
+    <h4>1</h4>
+    <div class="nested_accordion_content">
+      <p>I have text.</p>
+      <p>And some more of I have text.</p>
+      <p>Yeah!.</p>
+    </div>
+    <h4>2</h4>
+    <div class="nested_accordion_content">
+      <p>I have text.</p>
+      <p>And some more of I have text.</p>
+      <p>Yeah!.</p>
+    </div>
+    <h4>3</h4>
+    <div class="nested_accordion_content">
+      <p>I have text.</p>
+      <p>And some more of I have text.</p>
+      <p>Yeah!.</p>
+    </div>
+    <h4>4</h4>
+    <div class="nested_accordion_content">
       <p>I have text.</p>
       <p>And some more of I have text.</p>
       <p>Yeah!.</p>
@@ -115,10 +142,13 @@ h3.accordion_toggle_active, h4.accordion_toggle_active {
 </div>
 <script type="text/javascript">
 //<![CDATA[
-new Arturaz.Accordion('accordion', {toggleSelector: 'h3'})
+new Arturaz.Accordion('accordion', {toggleSelector: 'h3'});
 new Arturaz.Accordion('horizontal', {
-  type: 'horizontal', toggleSelector: 'h4'})
-new Arturaz.Accordion('nested', {toggleSelector: 'h4'})
+  type: 'horizontal', toggleSelector: 'h4'});
+new Arturaz.Accordion('nested', {
+  toggleSelector: 'h4', contentClass: 'nested_accordion_content'});
+new Arturaz.Accordion('noanim', {toggleSelector: 'h4', animate: false,
+  contentClass: 'nested_accordion_content'});
 //]]>
 </script>
 <h2>Get it</h2>
