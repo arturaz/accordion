@@ -1,6 +1,6 @@
-if (isUndefined(Arturaz))
+if (Object.isUndefined(Arturaz))
   Arturaz = {};
-if (isUndefined(Arturaz.Effect))
+if (Object.isUndefined(Arturaz.Effect))
   Arturaz.Effect = {};
 Arturaz.Effect.BlindLeft = function(element) {
   element = $(element);
