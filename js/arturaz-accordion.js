@@ -1,5 +1,7 @@
-Arturaz = {};
-Arturaz.Effect = {};
+if (isUndefined(Arturaz))
+  Arturaz = {};
+if (isUndefined(Arturaz.Effect))
+  Arturaz.Effect = {};
 Arturaz.Effect.BlindLeft = function(element) {
   element = $(element);
   element.makeClipping();
