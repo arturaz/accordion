@@ -1,7 +1,5 @@
-if (Object.isUndefined(Arturaz))
-  Arturaz = {};
-if (Object.isUndefined(Arturaz.Effect))
-  Arturaz.Effect = {};
+if (typeof(Arturaz) == 'undefined') Arturaz = {};
+if (typeof(Arturaz.Effect) == 'undefined') Arturaz.Effect = {};
 Arturaz.Effect.BlindLeft = function(element) {
   element = $(element);
   element.makeClipping();
