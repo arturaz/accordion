@@ -120,7 +120,7 @@ Arturaz.Accordion.prototype = {
     this.hideAll();
     if (this.options.activeToggle)
       this.selectContentByToggle(this.options.activeToggle, false);
-    else
+    else if (this.options.activeIndex != null)
       this.selectContentByIndex(this.options.activeIndex, false);
   },
   
